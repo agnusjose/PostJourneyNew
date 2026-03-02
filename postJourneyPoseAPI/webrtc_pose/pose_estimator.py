@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional, Dict
 
 import cv2
@@ -18,13 +18,13 @@ class KneePoseEstimator:
   seated knee extension.
   """
 
-  ema: AngleEMA = AngleEMA()
-  pose: mp_pose.Pose = mp_pose.Pose(
+  ema: AngleEMA = field(default_factory=AngleEMA)
+  pose: mp_pose.Pose = field(default_factory=lambda: mp_pose.Pose(
       static_image_mode=False,
       model_complexity=1,
       min_detection_confidence=0.5,
       min_tracking_confidence=0.5,
-  )
+  ))
 
   def process(self, frame_bgr) -> Optional[Dict]:
     img_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)

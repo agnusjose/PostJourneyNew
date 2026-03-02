@@ -17,7 +17,7 @@ export default function OrderDetailsScreen({ navigation, route }) {
     const { booking: initialBooking } = route.params;
     const [booking, setBooking] = useState(initialBooking);
     const [loading, setLoading] = useState(false);
-    const BASE_URL = "http://10.63.72.99:5000";
+    const BASE_URL = "http://172.16.230.150:5000";
 
     useFocusEffect(useCallback(() => {
         const fetchUpdatedBooking = async () => {

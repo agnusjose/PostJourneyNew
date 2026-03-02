@@ -78,7 +78,7 @@ export default function CheckoutScreen({ route, navigation }) {
   const [validatingStock, setValidatingStock] = useState(false);
   const isSubmittingRef = useRef(false);
 
-  const BASE_URL = "http://10.63.72.99:5000";
+  const BASE_URL = "http://172.16.230.150:5000";
 
   const totalAmount = calculateTotalAmount();
   const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));

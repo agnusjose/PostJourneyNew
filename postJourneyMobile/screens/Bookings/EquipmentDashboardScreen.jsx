@@ -51,7 +51,7 @@ export default function EquipmentDashboardScreen({ route, navigation }) {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageModalVisible, setImageModalVisible] = useState(false);
 
-  const BASE_URL = "http://10.63.72.99:5000";
+  const BASE_URL = "http://172.16.230.150:5000";
 
   console.log("🔍 EquipmentDashboardScreen - providerId:", providerId);
 

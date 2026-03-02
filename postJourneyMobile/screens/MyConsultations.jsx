@@ -14,7 +14,7 @@ import {
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
-const BASE_URL = 'http://10.63.72.99:5000/api';
+const BASE_URL = 'http://172.16.230.150:5000/api';
 
 export default function MyConsultations({ navigation, embedded }) {
     const { user } = useAuth();

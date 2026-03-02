@@ -36,10 +36,10 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:8081",
-    "http://10.63.72.99:5000",
-    "http://10.63.72.99",
-    "http://10.63.72.99:5000",
-    "http://10.63.72.99:5000",
+    "http://172.16.230.150:5000",
+    "http://172.16.230.150",
+    "http://172.16.230.150:5000",
+    "http://172.16.230.150:5000",
     "http://localhost:19006"
   ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
@@ -3817,7 +3817,7 @@ app.get("/test-provider/:id", async (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, "10.63.72.99", () => {
+app.listen(PORT, "172.16.230.150", () => {
   console.log(`🚀 Server running on port ${PORT} (LAN enabled)`);
   console.log(`📁 Uploads directory: ${path.join(__dirname, "uploads")}`);
 });

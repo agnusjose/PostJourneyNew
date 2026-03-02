@@ -39,7 +39,7 @@ export default function PatientCartScreen() {
   const [outOfStockItems, setOutOfStockItems] = useState([]);
   const [allSelected, setAllSelected] = useState(false);
 
-  const BASE_URL = "http://10.63.72.99:5000";
+  const BASE_URL = "http://172.16.230.150:5000";
 
   // Update allSelected state
   useEffect(() => {

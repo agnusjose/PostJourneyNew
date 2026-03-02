@@ -20,7 +20,7 @@ export default function AdminUsersScreen({ navigation }) {
 
   const BASE_URL = Platform.OS === "web"
     ? "http://localhost:5000"
-    : "http://10.63.72.99:5000";
+    : "http://172.16.230.150:5000";
 
   const fetchPatients = async () => {
     setLoading(true);

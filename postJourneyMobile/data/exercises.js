@@ -119,7 +119,7 @@ export const EXERCISES = {
 
   BED_MOBILITY_ROLL: {
     title: "Bed Mobility – Roll",
-    video: require("../assets/exercise_demos/neck_mobility_demo.mp4"),
+    video: require("../assets/exercise_demos/bed mobility.mp4"),
     instructions: [
       "Lie flat on your back",
       "Bend one knee and turn head to the side",
@@ -132,7 +132,7 @@ export const EXERCISES = {
 
   ANKLE_PUMPS: {
     title: "Ankle Pumps",
-    video: require("../assets/exercise_demos/neck_mobility_demo.mp4"),
+    video: require("../assets/exercise_demos/ankle pumps.mp4"),
     instructions: [
       "Lie or sit comfortably",
       "Point toes upward toward your head",
@@ -262,7 +262,7 @@ export const EXERCISES = {
 
   TANDEM_STANDING: {
     title: "Tandem Standing",
-    video: require("../assets/exercise_demos/neck_mobility_demo.mp4"),
+    video: require("../assets/exercise_demos/tandum stand.mp4"),
     instructions: [
       "Stand with one foot directly in front of the other",
       "Maintain balance",
@@ -278,10 +278,9 @@ export const EXERCISES = {
     video: require("../assets/exercise_demos/neck_mobility_demo.mp4"),
     instructions: [
       "Stand upright",
-      "Turn slowly in a full circle",
-      "Use small controlled steps",
-      "Maintain balance",
+      "Turn slowly in a half circle",
       "Repeat in both directions",
+      "Maintain balance",
     ],
     monitorScreen: "TurnInPlaceMonitor"
   },

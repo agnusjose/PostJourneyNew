@@ -15,8 +15,8 @@ import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { Audio } from 'expo-av';
 
-const BASE_URL = 'http://10.63.72.99:5000/api';
-const BASE_URL_UPLOADS = 'http://10.63.72.99:5000';
+const BASE_URL = 'http://172.16.230.150:5000/api';
+const BASE_URL_UPLOADS = 'http://172.16.230.150:5000';
 
 export default function ChatScreen({ route, navigation }) {
     const { consultation } = route.params;

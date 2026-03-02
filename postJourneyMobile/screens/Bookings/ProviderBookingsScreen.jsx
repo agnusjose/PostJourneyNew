@@ -40,7 +40,7 @@ export default function ProviderBookingsScreen({ route, navigation }) {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
-  const BASE_URL = "http://10.63.72.99:5000";
+  const BASE_URL = "http://172.16.230.150:5000";
 
   const fetchBookings = async () => {
     try {

@@ -15,7 +15,7 @@ import { Picker } from "@react-native-picker/picker";
 import { Ionicons } from "@expo/vector-icons";
 import axios from "axios";
 
-const BASE_URL = "http://10.63.72.99:5000";
+const BASE_URL = "http://172.16.230.150:5000";
 
 export default function ServiceProviderProfileScreen({ route, navigation }) {
     const { userId, userEmail } = route.params || {};

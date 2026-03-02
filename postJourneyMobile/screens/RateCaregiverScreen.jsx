@@ -14,7 +14,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
 
-const BASE_URL = "http://10.63.72.99:5000";
+const BASE_URL = "http://172.16.230.150:5000";
 
 export default function RateCaregiverScreen({ route, navigation }) {
     const { caregiverId, caregiverName } = route.params;

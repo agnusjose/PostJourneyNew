@@ -34,7 +34,7 @@ export default function EquipmentDetailScreen() {
   const [showFullImage, setShowFullImage] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const BASE_URL = "http://10.63.72.99:5000";
+  const BASE_URL = "http://172.16.230.150:5000";
 
   useEffect(() => { fetchEquipmentDetails(); fetchReviews(); }, []);
   useEffect(() => { if (equipment) { const cartQty = getCartItemQuantity(equipment._id); const maxAvailable = Math.max(0, equipment.stock - cartQty); setQuantity(Math.min(1, maxAvailable)); } }, [equipment]);

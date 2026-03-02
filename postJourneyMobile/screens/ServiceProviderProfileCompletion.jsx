@@ -139,7 +139,7 @@ export default function ServiceProviderProfileCompletion({ route, navigation }) 
       });
 
       const response = await axios.post(
-        "http://10.63.72.99:5000/api/service-provider/complete-profile",
+        "http://172.16.230.150:5000/api/service-provider/complete-profile",
         data,
         {
           headers: {
