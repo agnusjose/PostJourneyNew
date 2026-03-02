@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "postJourneyMobile",
+    "slug": "postJourneyMobile",
+    "scheme": "postjourney",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/postjourney_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#EAF4FF"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.postjourney.postJourneyMobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-web-browser",
+      "expo-secure-store"
+    ]
+  }
+}

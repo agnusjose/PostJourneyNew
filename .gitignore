@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist
+dist-ssr
+build
+*.local
+
+# Expo / React Native
+.expo/
+.expo-shared/
+.ex
+
+# Python (FastAPI / MediaPipe backend)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.*

@@ -1,0 +1,11 @@
+cd C:\Dev\pstjry\PostJourneyAlene\backend
+node server.js
+
+cd C:\Dev\pstjry\PostJourneyAlene\postJourneyPoseAPI
+uvicorn webrtc.webrtc_server:app --host 0.0.0.0 --port 8001
+
+cd C:\Dev\pstjry\PostJourneyAlene\postJourneyMobile
+adb tcpip 5555
+adb connect 100.111.63.243:5555
+npx expo run:android
+adb connect 192.168.137.4:5555

@@ -1,0 +1,51 @@
+{
+    "metadata": {
+        "exercisename": "marching_in_place",
+        "repnumber": 1,
+        "formquality": "correctform",
+        "camera_angle": "side",
+        "joint_angles_monitored": [
+            "hip_flexion",
+            "knee_angle"
+        ]
+    },
+    "frames": [
+        {
+            "frame_index": 120,
+            "timestamp": 4.0,
+            "keypoints_2d": [
+                {
+                    "x": 0.5,
+                    "y": 0.2,
+                    "z": -0.1,
+                    "visibility": 0.99
+                },
+                {
+                    "comment": "... 33 MediaPipe landmarks ..."
+                }
+            ],
+            "keypoints_3d": [
+                {
+                    "x": 0.05,
+                    "y": -0.1,
+                    "z": 0.0,
+                    "visibility": 0.99
+                },
+                {
+                    "comment": "... 33 World points in meters ..."
+                }
+            ],
+            "metrics": {
+                "left_knee_angle": 95.2,
+                "right_knee_angle": 178.5,
+                "hip_flexion_angle": 88.4,
+                "trunk_lean_angle": 2.1
+            },
+            "labels": {
+                "phase": "mid",
+                "quality": "correctform",
+                "errors": []
+            }
+        }
+    ]
+}
