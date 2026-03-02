@@ -7,7 +7,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import axios from "axios";
 
-const API_BASE = "http://172.16.230.150:5000";
+const API_BASE = "http://192.168.172.72:5000";
 const C = { primary: "#0A5F7A", secondary: "#1D8FAB", bg: "#F0F6F9", textDark: "#0D2535", textMid: "#4A6B7C", textLight: "#8BA9B8", cardBorder: "#DBE8EE" };
 
 export default function MedicalVideos({ navigation }) {

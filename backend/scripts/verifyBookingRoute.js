@@ -18,7 +18,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/postJourneyDB")
 
             console.log(`👤 Found user: ${user.name} (${user._id})`);
             const userId = user._id.toString();
-            const BASE_URL = "http://172.16.230.150:5000";
+            const BASE_URL = "http://192.168.172.72:5000";
 
             console.log(`📡 Testing endpoint: ${BASE_URL}/booking/patient/${userId}`);
 

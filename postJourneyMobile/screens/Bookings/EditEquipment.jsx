@@ -16,7 +16,7 @@ const C = {
 
 export default function EditEquipment({ route, navigation }) {
   const { equipment } = route.params;
-  const BASE_URL = "http://172.16.230.150:5000";
+  const BASE_URL = "http://192.168.172.72:5000";
   const [form, setForm] = useState({ equipmentName: equipment.equipmentName || "", description: equipment.description || "", pricePerDay: equipment.pricePerDay?.toString() || "", stock: equipment.stock?.toString() || "1", category: equipment.category || "other" });
   const [image, setImage] = useState(equipment.imageUrl ? { uri: equipment.imageUrl } : null);
   const [loading, setLoading] = useState(false);

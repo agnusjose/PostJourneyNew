@@ -15,7 +15,7 @@ export default function ProviderBookingDetailsScreen({ navigation, route }) {
     const { booking: initialBooking } = route.params;
     const [booking, setBooking] = useState(initialBooking);
     const [loading, setLoading] = useState(false);
-    const BASE_URL = "http://172.16.230.150:5000";
+    const BASE_URL = "http://192.168.172.72:5000";
 
     const getStatusColor = (status) => { switch (status) { case "confirmed": return C.success; case "in-progress": return C.secondary; case "completed": return C.success; case "cancelled": return C.danger; default: return C.warning; } };
     const getPaymentStatusColor = (status) => { switch (status) { case "paid": return C.success; case "pending": return C.warning; case "refunded": return '#8b5cf6'; default: return C.textMuted; } };

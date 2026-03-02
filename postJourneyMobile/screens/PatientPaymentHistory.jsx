@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 
-const BASE_URL = 'http://172.16.230.150:5000/api';
+const BASE_URL = 'http://192.168.172.72:5000/api';
 
 export default function PatientPaymentHistory({ navigation, route, embedded = false }) {
     const { userId } = route.params || {};

@@ -20,7 +20,7 @@ export default function ForgotPasswordScreen({ navigation }) {
         if (!email) { Alert.alert("Error", "Please enter your email address"); return; }
         setLoading(true);
         try {
-            const response = await axios.post("http://172.16.230.150:5000/auth/forgot-password", { email: email.toLowerCase().trim() });
+            const response = await axios.post("http://192.168.172.72:5000/auth/forgot-password", { email: email.toLowerCase().trim() });
             if (response.data.success) {
                 Alert.alert("Success", response.data.message);
                 navigation.navigate("ResetPasswordScreen", { email: email.toLowerCase().trim() });

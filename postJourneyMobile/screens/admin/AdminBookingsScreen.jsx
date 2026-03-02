@@ -20,7 +20,7 @@ import axios from "axios";
 const BASE_URL =
     Platform.OS === "web"
         ? "http://localhost:5000"
-        : "http://172.16.230.150:5000";
+        : "http://192.168.172.72:5000";
 
 const C = {
     primary: "#0A5F7A", secondary: "#1D8FAB", accent: "#2EC4B6",

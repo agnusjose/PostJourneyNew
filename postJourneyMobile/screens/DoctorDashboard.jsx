@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
     View,
     Text,
@@ -16,7 +16,7 @@ import {
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
 
-const BASE_URL = "http://172.16.230.150:5000";
+const BASE_URL = "http://192.168.172.72:5000";
 
 export default function DoctorDashboard({ route, navigation }) {
     const { userId, userName, userEmail, openNotesForId } = route.params || {};
@@ -37,6 +37,8 @@ export default function DoctorDashboard({ route, navigation }) {
         generalComments: ''
     });
     const [savingNotes, setSavingNotes] = useState(false);
+    // Tracks which openNotesForId we've already auto-opened, so it never fires twice
+    const notesAutoOpenedForRef = useRef(null);
 
     // Patient History Modal State
     const [historyModalVisible, setHistoryModalVisible] = useState(false);
@@ -138,11 +140,18 @@ export default function DoctorDashboard({ route, navigation }) {
         };
     }, [userId, alertedSessions]);
 
-    // Auto-open notes when navigating back from ChatScreen after ending meeting
+    // Auto-open notes when navigating back from ChatScreen after ending meeting.
+    // Uses a ref so it only fires ONCE per openNotesForId, regardless of how many
+    // times consultations refreshes (every 15s).
     useEffect(() => {
-        if (openNotesForId && consultations.length > 0) {
+        if (
+            openNotesForId &&
+            consultations.length > 0 &&
+            notesAutoOpenedForRef.current !== openNotesForId
+        ) {
             const target = consultations.find(c => c._id === openNotesForId);
             if (target) {
+                notesAutoOpenedForRef.current = openNotesForId; // Mark as opened — never fires again for this ID
                 handleOpenNotes(target);
             }
         }
@@ -214,8 +223,10 @@ export default function DoctorDashboard({ route, navigation }) {
                         try {
                             const res = await axios.post(`${BASE_URL}/api/consultation/${item._id}/end`);
                             if (res.data.success) {
-                                fetchConsultations();
+                                // Open notes FIRST, then refresh in background so the modal
+                                // is already open before any consultations state update happens.
                                 handleOpenNotes(item);
+                                fetchConsultations();
                             }
                         } catch (e) {
                             Alert.alert("Error", "Failed to end meeting");

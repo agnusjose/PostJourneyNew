@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import axios from "axios";
 import { LinearGradient } from "expo-linear-gradient";
 
-const BASE_URL = "http://172.16.230.150:5000";
+const BASE_URL = "http://192.168.172.72:5000";
 const C = {
     primary: '#0A5F7A', secondary: '#1D8FAB', bg: '#F0F6F9', card: '#FFFFFF',
     cardBorder: '#D7E5ED', text: '#0A3D52', textSecondary: '#4A7A8C',

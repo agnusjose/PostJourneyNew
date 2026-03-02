@@ -38,7 +38,7 @@ export default function AdminUserDetailsScreen({ route, navigation }) {
 
     const BASE_URL = Platform.OS === "web"
         ? "http://localhost:5000"
-        : "http://172.16.230.150:5000";
+        : "http://192.168.172.72:5000";
 
     useEffect(() => {
         fetchUserDetails();

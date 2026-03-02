@@ -23,7 +23,7 @@ export default function LoginScreen({ navigation }) {
     if (!email || !password) { Alert.alert("Error", "Please enter both email and password."); return; }
     setLoading(true);
     try {
-      const response = await axios.post("http://172.16.230.150:5000/login", { email: email.toLowerCase().trim(), password });
+      const response = await axios.post("http://192.168.172.72:5000/login", { email: email.toLowerCase().trim(), password });
       const data = response.data;
       console.log("Full login response:", data);
       if (data.success) {

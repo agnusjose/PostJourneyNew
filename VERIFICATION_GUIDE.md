@@ -54,15 +54,15 @@ cors({
   origin: [
     "http://localhost:5173",      // Web app (Vite)
     "http://localhost:8081",      // Expo web
-    "http://172.16.230.150:5000",// Backend (self-reference)
-    "http://172.16.230.150",     // Mobile app device
+    "http://192.168.172.72:5000",// Backend (self-reference)
+    "http://192.168.172.72",     // Mobile app device
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
 })
 ```
-✅ Allows mobile app requests from `172.16.230.150`
+✅ Allows mobile app requests from `192.168.172.72`
 
 ### **Login Endpoint** (LINE 125-150)
 ```js
@@ -157,7 +157,7 @@ postJourneyMobile/
 
 ```
 backend/
-└── server.js (CORS allows 172.16.230.150, Login returns userType)
+└── server.js (CORS allows 192.168.172.72, Login returns userType)
 ```
 
 ---

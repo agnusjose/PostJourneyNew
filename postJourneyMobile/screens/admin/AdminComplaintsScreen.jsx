@@ -8,7 +8,7 @@ import axios from "axios";
 import { useFocusEffect } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-const BASE_URL = "http://172.16.230.150:5000";
+const BASE_URL = "http://192.168.172.72:5000";
 
 const C = {
     primary: "#0A5F7A", secondary: "#1D8FAB", accent: "#2EC4B6",

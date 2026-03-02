@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 
-const BASE_URL = "http://172.16.230.150:5000";
+const BASE_URL = "http://192.168.172.72:5000";
 
 export default function MyPatients({ route, navigation }) {
     const { userId } = route.params;

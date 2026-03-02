@@ -15,8 +15,8 @@ import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
 // Using the same IP as seen in LoginScreen, but targeting the /api route used by doctorRoutes
-const BASE_URL = 'http://172.16.230.150:5000/api';
-const BASE_URL_IMAGE = 'http://172.16.230.150:5000';
+const BASE_URL = 'http://192.168.172.72:5000/api';
+const BASE_URL_IMAGE = 'http://192.168.172.72:5000';
 
 export default function ConsultDoctor({ navigation, embedded }) {
     const { user } = useAuth(); // Get logged-in user details

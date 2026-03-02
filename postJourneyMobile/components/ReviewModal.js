@@ -15,7 +15,7 @@ export default function ReviewModal({ visible, onClose, doctorId, patientId, con
 
         setLoading(true);
         try {
-            const response = await axios.post("http://172.16.230.150:5000/api/reviews/submit", {
+            const response = await axios.post("http://192.168.172.72:5000/api/reviews/submit", {
                 patientId,
                 doctorId,
                 consultationId,
